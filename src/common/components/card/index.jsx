@@ -31,7 +31,7 @@ export const Card = ({ features }) => {
   //   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-[16px] md:gap-[30px] justify-center mt-[30px]">
+    <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-[16px] md:gap-[30px] justify-center mt-[30px]">
       {features.map((info, index) => (
         <div
           key={index + info.title}

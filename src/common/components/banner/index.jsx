@@ -59,7 +59,7 @@ export function BannerSlider({ sliders }) {
   if (!isClient) return null;
 
   return (
-    <div className="md:dual-slider-container md:container overflow-hidden relative">
+    <div className="md:dual-slider-container lg:container overflow-hidden relative">
       {!isMobile && (
         <Swiper
           ref={swiperRef}
