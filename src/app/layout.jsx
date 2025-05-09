@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${fontSfDisplayPro.variable} antialiased`}>
         <ThemeProvider>
-          <div className="md:w-[1240px] mx-auto">
+          <div className="md:w-[1240px] w-[88%] mx-auto">
             <Header />
             {children}
           </div>
