@@ -25,7 +25,7 @@ const ProductCard = ({
               alt={slug}
               className="rounded-[19px] "
             />
-            <span className="font-bold font-sfpro absolute left-[13px] top-[13px]  bg-[#ea2427] flex items-center justify-center text-white text-xxxs md:text-[10px] px-[12px] rounded-[10px] h-[25px] md:h-[30px] w-fit">
+            <span className="font-bold font-sfpro absolute left-[13px] top-[13px]  bg-[#ea2427] flex items-center justify-center text-white text-[8px] md:text-[10px] px-[12px] rounded-[10px] h-[20px] w-[33px] md:h-[30px] md:w-[51px]">
               -{discount}%
             </span>
             <div className="absolute  right-[13px] top-[13px] bg-white flex justify-center items-center  h-[25px] sm:h-[30px] px-[12px] rounded-[20px] shadow-scale">
