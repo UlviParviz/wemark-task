@@ -5,4 +5,3 @@ export async function fetchData(route) {
   return response.json();
 }
 
-//asd

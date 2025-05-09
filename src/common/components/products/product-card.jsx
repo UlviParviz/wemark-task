@@ -2,6 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import { BasketIcon } from "./basket-icon";
+import { calculateDiscountedPrice } from "@/common/utils/calculateDiscountedPrice";
 
 const ProductCard = ({
   image,
@@ -35,7 +36,7 @@ const ProductCard = ({
           </div>
         </div>
         <div className="  text-start mt-[-1px] px-[11px] sm:px-[20px] ">
-          <div className="flex gap-[13px]  ">
+          <div className="md:flex gap-[13px] hidden">
             <div className="flex items-center justify-center">
               <Image
                 alt="star"
@@ -43,7 +44,7 @@ const ProductCard = ({
                 height={15}
                 width={15}
               />
-              <span className="  text-xxs ml-[1px] font-sfpro font-normal">
+              <span className="  text-[10px] ml-[1px] font-sfpro font-normal">
                 {rate}
               </span>
             </div>
@@ -55,30 +56,30 @@ const ProductCard = ({
                 width={15}
                 className="invertsvg"
               />
-              <span className=" text-xxs ml-[1px] font-sfpro font-normal">
+              <span className=" text-[10px] ml-[1px] font-sfpro font-normal">
                 {reviewCount}
               </span>
             </div>
           </div>
           <div>
-            <h3 className=" md:text-[14px] text-[12px] font-sfpro font-normal mt-1 max-h-[40px] max-w-[100%] overflow-hidden ">
+            <h3 className=" md:text-[14px] text-[12px] font-sfpro font-normal mt-1 h-[35px] md:h-[40px] max-w-[100%] overflow-hidden ">
               {name}
             </h3>
           </div>
           <div className="flex gap-4 my-[16px] sm:my-[21px]">
             <div className="flex flex-col">
-              <span className=" line-through text-sm sm:text-md font-sfpro font-medium opacity-50">
+              <span className=" line-through text-[10px] md:text-[14px]  font-sfpro font-medium opacity-50">
                 {price}₼
               </span>
-              <span className=" text-sm sm:text-xxl  font-bold  font-sfpro">
-                {Number((price - (price * discount) / 100).toFixed(2))}₼
+              <span className=" text-[12px] md:text-[20px]  font-bold  font-sfpro">
+                {calculateDiscountedPrice(price, discount)}₼
               </span>
             </div>
             <div className="flex flex-col">
-              <span className="  text-sm sm:text-md font-sfpro font-medium opacity-50">
+              <span className="  text-[10px] md:text-[14px] font-sfpro font-medium opacity-50">
                 {perMonth?.month} Month
               </span>
-              <span className="text-sm sm:text-xxl  font-sfpro font-bold">
+              <span className="text-[12px] md:text-[20px]  font-sfpro font-bold">
                 {perMonth?.price}₼
               </span>
             </div>
