@@ -72,7 +72,7 @@ const ProductCard = ({
                 {price}₼
               </span>
               <span className=" text-[12px] md:text-[20px]  font-bold  font-sfpro">
-                {calculateDiscountedPrice(price, discount)}₼
+                {calculateDiscountedPrice(price, discount)}
               </span>
             </div>
             <div className="flex flex-col">
